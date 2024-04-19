@@ -49,7 +49,7 @@ func (e EmbedZipFile) Extract() error {
 		if err != nil {
 			return err
 		}
-		if err := os.WriteFile(zippedFile.Name, unzippedBB, 0644); err != nil {
+		if err := os.WriteFile(zippedFile.Name, unzippedBB, 0777); err != nil {
 			return err
 		}
 	}
