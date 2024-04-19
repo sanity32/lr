@@ -35,7 +35,7 @@ func (e EmbedZipFile) ExtractFirst(filename string) (err error) {
 		return err
 	} else {
 		// filename = r.File[0].Name
-		return os.WriteFile(filename, bb, 0644)
+		return os.WriteFile(filename, bb, 0777)
 	}
 }
 
